@@ -15,5 +15,7 @@ Les étapes du codage par exemple pour une chaine de caractères :
 8. Refaire l'étape 6 jusqu'à la fin; (voir l'exemple)
 
 ### Exemple :
-Soit une chaine de caractères << chaine = "abracadabrada"
+Soit une chaine de caractères << chaine = "abracadabrada" >>
+Le codage de Huffman est présenté sur la figure :
+
 ![Codage-Huffman exemple](Images/Codage_Huffman.png)
