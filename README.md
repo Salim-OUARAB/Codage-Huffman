@@ -3,11 +3,11 @@ Projet académique
 
 Le codage entropique de Huffman est une transformation d'une représentation de données en une autre, réduite et sans perte.
 
-Les étapes du codage par exemple pour chaine de caractères :
+Les étapes du codage par exemple pour une chaine de caractères :
 
 1. Lister les caractères sans répétition;
 2. Trouver le nombre d'occurrence pour chaque caractères;
-3. Tri les nombres d'occurrence du plus grand au plus petit, changer également la positions des caractères ;
+3. Trier les nombres d'occurrence du plus grand au plus petit, changer également la positions des caractères ;
 4. Additionner les deux derniers nombres, puis faire le classement ; 
 5. Refaire l'étape 4 jusqu'à ce qui reste deux nombres;
 6. Affecter le digite 0 au premier nombre et 1 au deuxième;
