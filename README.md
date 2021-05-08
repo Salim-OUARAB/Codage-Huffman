@@ -16,4 +16,4 @@ Les étapes du codage par exemple pour une chaine de caractères :
 
 ### Exemple :
 Soit une chaine de caractères << chaine = "abracadabrada"
-![Codage-Huffman exemple](Images/example1.png)
+![Codage-Huffman exemple](Images/Codage_Huffman.png)
