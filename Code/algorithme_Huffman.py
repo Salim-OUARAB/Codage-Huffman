@@ -148,8 +148,28 @@ for i in range(len(codage)):
 
 compress = chaine
 #del chaine 
-
 #Remplacer chaque lettre par son code 
 for i in range(len(table_codage)-1):
     code = table_codage[i,2]
     compress = compress.replace(table_codage[i,0],table_codage[i,2])
+
+
+"""
+Décompression  
+"""
+decompress =''
+code_char = ''
+for j in range(len(compress)):
+    code_char = code_char + compress[j]
+    for i in range(len(table_codage)):
+        code_to_decomp = table_codage[i,2]
+        
+        code_len = len(code_to_decomp)
+        char_len = len(code_char)
+        if code_len != char_len:
+            continue
+        
+        if code_char == code_to_decomp:
+            decompress = decompress + table_codage[i,0]
+            code_char = ''
+            break
