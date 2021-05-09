@@ -108,6 +108,48 @@ while donne != 1:
 
 
 
+"""
+Attribution des digites aux indices : indice min « 0 » indice max « 1 »
+"""
 
+# codage de chaque caractère dans un tableau
+codage = np.empty((np.size(table,0),np.size(table,1)),dtype= 'U25')  
+codage[0,0]='0'
+codage[1,0]='1'
+c = 0
+while col_en_cours > 0:
+    saut = saut-2
+    for n in range(len(table)):
+        if table[n,col_en_cours]==0:
+          
+            break
+        
+        indice_min = tab_indices[n,saut]
+        indice_max = tab_indices[n,saut+1]
+        if indice_max == indice_min:
+            codage[indice_min, c+1] = codage[n,c]
+        else:
+            codage[indice_min, c+1] = codage[n,c] + '0'
+            codage[indice_max, c+1] = codage[n,c] + '1'
+        
+    c+=1
+    col_en_cours -= 1
+    
+"""
+Stocker chaque caractère et son code dans un tableau 
+"""
 
+table_codage = np.empty((len(codage),3),dtype='U25')
+for i in range(len(codage)):
+    table_codage[i,0] = chr(table[i,0]) 
+    table_codage[i,1] = str(table[i,1])
+    table_codage[i,2] = codage[i,c]        
+    
 
+compress = chaine
+#del chaine 
+
+#Remplacer chaque lettre par son code 
+for i in range(len(table_codage)-1):
+    code = table_codage[i,2]
+    compress = compress.replace(table_codage[i,0],table_codage[i,2])
