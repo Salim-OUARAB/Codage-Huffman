@@ -153,6 +153,8 @@ for i in range(len(table_codage)-1):
     code = table_codage[i,2]
     compress = compress.replace(table_codage[i,0],table_codage[i,2])
 
+# Pour transmettre ce code il faut le transformer en binaire 
+#bin(int(compress))
 
 """
 Décompression  
